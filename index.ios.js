@@ -24,8 +24,7 @@ var PolitasReact = React.createClass({
       return this.renderLoadingView();
     }
 
-    var feature = this.state.feature;
-    return this.renderAll(feature);
+    return this.renderAll();
   },
   renderLoadingView: function() {
     return (
@@ -36,7 +35,8 @@ var PolitasReact = React.createClass({
       </View>
     );
   },
-  renderAll: function(feature) {
+  renderAll: function() {
+    var feature = this.state.feature;
     return (
 	<View style={styles.container}>
         <Image
